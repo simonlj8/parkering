@@ -4,6 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Car {
@@ -11,6 +12,9 @@ public class Car {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
     private String regNumber;
+
+    @ManyToOne
+    private Person person;
 
     public Long getId() {
         return Id;
@@ -26,5 +30,14 @@ public class Car {
 
     public void setregNumber(String regNumber) {
         this.regNumber = regNumber;
+    }
+
+
+    public Person getPerson() {
+        return person;
+    }
+
+    public void setPerson(Person person) {
+        this.person = person;
     }
 }
