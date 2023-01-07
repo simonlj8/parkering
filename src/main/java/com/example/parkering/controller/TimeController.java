@@ -13,7 +13,7 @@ public class TimeController {
 
 
 
-@PostMapping("/parking/{person_id}/{car_id}/{location}")
+@PostMapping("/parking")
 public ResponseEntity<Time> timeStart(){
     return timeStart();
 }
