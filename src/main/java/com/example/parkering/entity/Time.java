@@ -10,7 +10,7 @@ public class Time {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long ID;
+     Long ID;
 
     private LocalDateTime timeStart;
     private LocalDateTime timeStop;

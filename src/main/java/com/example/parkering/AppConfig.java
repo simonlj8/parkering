@@ -11,4 +11,7 @@ public class AppConfig {
     GeolatteGeomModule geolatteGeomModule() {
         return new GeolatteGeomModule();
     }
+
+
+    
 }
