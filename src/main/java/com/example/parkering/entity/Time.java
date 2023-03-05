@@ -17,6 +17,8 @@ public class Time {
     private LocalDateTime timeStart;
     private LocalDateTime timeStop;
 
+   // private Location location;
+
     public Long getID() {
         return ID;
     }
@@ -39,5 +41,9 @@ public class Time {
     public void setTimeStop(LocalDateTime timeStop) {
         this.timeStop = timeStop;
     }
+
+   /*  public Location getLocation() {
+        return location;
+    }*/
 
 }
