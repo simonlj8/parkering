@@ -12,17 +12,17 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.parkering.entity.Car;
-import com.example.parkering.entity.Person;
+import com.example.parkering.entity.Parking;
 import com.example.parkering.repository.CarRepository;
-import com.example.parkering.repository.PersonRepository;
+import com.example.parkering.repository.ParkingRepository;
 import com.example.parkering.service.CarService;
 
 @RestController
 public class CarController {
     CarRepository carRepository;
-    PersonRepository personRepository;
+    ParkingRepository personRepository;
 
-    public CarController(CarRepository carRepository, PersonRepository personRepository) {
+    public CarController(CarRepository carRepository, ParkingRepository personRepository) {
         this.carRepository = carRepository;
         this.personRepository = personRepository;
     }
@@ -37,7 +37,7 @@ public class CarController {
 
     @PatchMapping("/car/{carId}/{personId}")
     public String conectPersonToCar(@PathVariable Long carId, @PathVariable Long personId) {
-        Person person = personRepository.findById(personId).get();
+        Parking person = personRepository.findById(personId).get();
         Car car = carRepository.findById(carId).get();
         car.setPerson(person);
         carRepository.save(car);
