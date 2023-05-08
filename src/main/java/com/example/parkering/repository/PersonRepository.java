@@ -5,6 +5,6 @@ import org.springframework.data.repository.ListCrudRepository;
 
 import com.example.parkering.entity.Person;
 
-public interface PersonRepository extends ListCrudRepository<Person, Long> {
+public interface PersonRepository extends CrudRepository<Person, Long> {
     
 }

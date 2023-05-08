@@ -29,7 +29,7 @@ public class CarController {
 
     @PostMapping("/car")
     public ResponseEntity<Car> addCar(@RequestBody Car NewCar) {
-        if (CarService.CRegNumber(NewCar.getregNumber())) {
+        if (CarService.CheckRegNr(NewCar.getregNr())) {
             return new ResponseEntity<>(carRepository.save(NewCar), HttpStatus.OK);
         }
         return new ResponseEntity<>(HttpStatus.BAD_REQUEST);

@@ -11,7 +11,7 @@ public class Car {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String regNumber;
+    private String regNr;
 
     @ManyToOne
     private Parking person;
@@ -24,12 +24,12 @@ public class Car {
         this.id = id;
     }
 
-    public String getregNumber() {
-        return regNumber;
+    public String getregNr() {
+        return regNr;
     }
 
-    public void setregNumber(String regNumber) {
-        this.regNumber = regNumber;
+    public void setregNr(String regNr) {
+        this.regNr = regNr;
     }
 
 
