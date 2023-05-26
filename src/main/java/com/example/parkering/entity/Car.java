@@ -14,7 +14,7 @@ public class Car {
     private String regNr;
 
     @ManyToOne
-    private Parking person;
+    private Person person;
 
     public Long getId() {
         return id;
@@ -33,11 +33,11 @@ public class Car {
     }
 
 
-    public Parking getPerson() {
+    public Person getPerson() {
         return person;
     }
 
-    public void setPerson(Parking person) {
+    public void setPerson(Person person) {
         this.person = person;
     }
 }

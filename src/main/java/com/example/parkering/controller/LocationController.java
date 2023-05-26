@@ -40,13 +40,13 @@ public class LocationController {
     }
 
     @GetMapping("/locations")
-    public List<Location> allPoints() {
+    public List<Location> allLocations() {
         return locationRepository.findAll();
     }
 
     @GetMapping("/location/{id}")
-    public Optional<Location> getOneLot(@PathVariable Long lotId) {
-        return locationRepository.findById(lotId);
+    public Optional<Location> getOneLocation(@PathVariable Long locationId) {
+        return locationRepository.findById(locationId);
     }
 
 }
