@@ -7,8 +7,12 @@ public class CarService {
         }
         for (int i = 0; i < 3; i++) {
             if (Character.isLetter(regNr.charAt(i))) {
-                if ((Character.isDigit(regNr.charAt(i + 3)))) {
-                } else {
+                if ((Character.isDigit(regNr.charAt(i + 3)))) 
+
+                {
+                    
+                }
+                 else {
                     return false;
                 }
             } else {

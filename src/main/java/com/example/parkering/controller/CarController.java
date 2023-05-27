@@ -30,9 +30,9 @@ public class CarController {
     }
 
     @PostMapping("/car")
-    public ResponseEntity<Car> addCar(@RequestBody Car NewCar) {
-        if (CarService.CheckRegNr(NewCar.getregNr())) {
-            return new ResponseEntity<>(carRepository.save(NewCar), HttpStatus.OK);
+    public ResponseEntity<Car> addCar(@RequestBody Car newCar) {
+        if (CarService.CheckRegNr(newCar.getregNr())) {
+            return new ResponseEntity<>(carRepository.save(newCar), HttpStatus.OK);
         }
         return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
     }
@@ -43,7 +43,7 @@ public class CarController {
         Car car = carRepository.findById(carId).get();
         car.setPerson(person);
         carRepository.save(car);
-        return "Add person to car";
+        return "Person connected to car";
     }
 
     @GetMapping("/car/{carId}")
